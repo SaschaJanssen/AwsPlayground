@@ -3,7 +3,7 @@ MAINTAINER me
 
 VOLUME /tmp
 
-ADD build/libs/RockPaperScissor-1.0-SNAPSHOT.jar app.jar
+ADD build/libs/RockPaperScissor-0.0.1-SNAPSHOT.jar app.jar
 
 ENV JAVA_OPTS=""
 
