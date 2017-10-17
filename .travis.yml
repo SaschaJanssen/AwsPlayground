@@ -6,14 +6,10 @@ jdk:
 services:
   - docker
 
-env:
-  global:
-  - NAME=rock-paper-scissors-lizard-spock
-
 script:
   - export TAG=`if [ "${TRAVIS_BRANCH}" == "master" ]; then echo "latest"; else echo ${TRAVIS_BRANCH} ; fi`
 
   - docker login -u AWS -p ${AWS_REGISTRY_PW} https://${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com
-  - docker build -t ${NAME} .
-  - docker tag ${NAME}:latest ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/${NAME}:${TAG}
-  - docker push ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/${NAME}:${TAG}
+  - docker build -t rock-paper-scissors-lizard-spock .
+  - docker tag rock-paper-scissors-lizard-spock:latest ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/rock-paper-scissors-lizard-spock:latest
+  - docker push ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/rock-paper-scissors-lizard-spock:latest
