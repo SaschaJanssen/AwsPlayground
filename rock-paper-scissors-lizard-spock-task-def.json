@@ -1,0 +1,23 @@
+{
+  "family": "rock-paper-scissors-lizard-spock",
+  "containerDefinitions": [
+    {
+      "name": "rock-paper-scissors-lizard-spock",
+      "image": "${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/rock-paper-scissors-lizard-spock",
+      "cpu": 1,
+      "memory": 128,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 80
+        }
+      ],
+      "entryPoint": [
+        "/usr/sbin/apache2",
+        "-D",
+        "FOREGROUND"
+      ],
+      "essential": true
+    }
+  ]
+}
