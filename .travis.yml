@@ -9,6 +9,7 @@ env:
 
 script:
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - echo $TAG
   - docker login -u AWS -p $AWS_REGISTRY_PW https://$AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com
-  - docker build -t rock-paper-scissors-lizard-spock -t $REPO:$TAG -f Dockerfile .
+  - docker build -t $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/$REPO:$TAG -f Dockerfile .
   - docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/$REPO:$TAG
