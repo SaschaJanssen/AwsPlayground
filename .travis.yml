@@ -3,14 +3,17 @@ language: java
 jdk:
   - oraclejdk9
 
+services:
+  - docker
+
 env:
   global:
   - NAME=rock-paper-scissors-lizard-spock
 
 script:
-  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
+  - export TAG=`if [ "${TRAVIS_BRANCH}" == "master" ]; then echo "latest"; else echo ${TRAVIS_BRANCH} ; fi`
 
-  - docker login -u AWS -p $AWS_REGISTRY_PW https://$AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com
-  - docker build -t $NAME:$TAG .
-  - docker tag $NAME:$TAG $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/$NAME:$TAG
-  - docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-central-1.amazonaws.com/$NAME:$TAG
+  - docker login -u AWS -p ${AWS_REGISTRY_PW} https://${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com
+  - docker build -t ${NAME}:${TAG} .
+  - docker tag ${NAME}:${TAG} ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/${NAME}:${TAG}
+  - docker push ${AWS_ACCOUNT_ID}.dkr.ecr.eu-central-1.amazonaws.com/${NAME}:${TAG}
