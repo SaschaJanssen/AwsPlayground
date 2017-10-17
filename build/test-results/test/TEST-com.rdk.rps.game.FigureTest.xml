@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.rdk.rps.game.FigureTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2017-10-17T10:52:44" hostname="localhost" time="0.037">
+  <properties/>
+  <testcase name="should_throw_npe_if_attack_string_is_not_valid" classname="com.rdk.rps.game.FigureTest" time="0.032"/>
+  <testcase name="rock_should_crush_lizard" classname="com.rdk.rps.game.FigureTest" time="0.001"/>
+  <testcase name="spock_should_vaporize_rock" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="should_parse_input_string_figure_to_enum" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="should_be_drawn_if_both_enter_the_same_figure" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="scissors_should_decapitate_lizard" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="rock_should_crush_scissors" classname="com.rdk.rps.game.FigureTest" time="0.001"/>
+  <testcase name="lizard_should_eat_paper" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="scissors_should_cut_paper" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="paper_should_cover_rock" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="lizard_should_poison_spock" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="should_throw_iae_on_empty_string_input" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="paper_should_disprove_spock" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <testcase name="spock_should_smash_scissors" classname="com.rdk.rps.game.FigureTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
