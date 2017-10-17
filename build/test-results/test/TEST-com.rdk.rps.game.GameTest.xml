@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.rdk.rps.game.GameTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-10-17T10:52:44" hostname="localhost" time="0.08">
-  <properties/>
-  <testcase name="should_hold_empty_game" classname="com.rdk.rps.game.GameTest" time="0.072"/>
-  <testcase name="should_run_a_game_for_players" classname="com.rdk.rps.game.GameTest" time="0.008"/>
-  <system-out><![CDATA[12:52:44.398 [Test worker] INFO com.rdk.rps.game.Game - player one picked [ROCK], player two picked [PAPER], winner [PAPER]
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
