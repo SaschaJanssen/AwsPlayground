@@ -1,0 +1,1 @@
+![Travis Status](https://travis-ci.org/SaschaRodekamp/AwsPlayground.svg?branch=master)
